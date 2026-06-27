@@ -1,0 +1,5 @@
+db-dump.tar.gz
+crates_raw.csv
+versions_raw.csv
+__pycache__/
+*.pyc
