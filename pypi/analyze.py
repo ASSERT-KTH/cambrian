@@ -341,9 +341,6 @@ BREAK_DATE  = date(2022, 11, 1)
 AGENTS_DATE = date(2025, 10, 1)
 ANNO_COLOR  = '#cc3333'
 
-fig, (ax_pkg, ax_rel) = plt.subplots(1, 2, figsize=(14, 5))
-fig.suptitle('PyPI Monthly Growth (Jan 2018 – Apr 2026)', fontsize=13, fontweight='bold')
-
 def plot_raw(ax, values, ylabel, title):
     from matplotlib.ticker import FuncFormatter
     normal = ~anomaly_mask
@@ -368,12 +365,21 @@ def plot_raw(ax, values, ylabel, title):
     ax.tick_params(axis='x', rotation=30, labelsize=8)
     ax.legend(fontsize=8, loc='upper left')
 
+fig_pkg, ax_pkg = plt.subplots(figsize=(7, 5))
+fig_pkg.suptitle('PyPI Monthly Growth — New Packages (Jan 2018 – Apr 2026)', fontsize=11, fontweight='bold')
 plot_raw(ax_pkg, new_packages, 'New packages / month', 'New packages per month')
-plot_raw(ax_rel, releases,     'Releases / month',     'Total releases per month')
+fig_pkg.tight_layout()
+fig_pkg.savefig('pypi_growth_packages.png', dpi=150, bbox_inches='tight')
+plt.close(fig_pkg)
+print("\nSaved: pypi_growth_packages.png")
 
-plt.tight_layout()
-plt.savefig('pypi_growth.png', dpi=150, bbox_inches='tight')
-print("\nSaved: pypi_growth.png")
+fig_rel, ax_rel = plt.subplots(figsize=(7, 5))
+fig_rel.suptitle('PyPI Monthly Growth — Releases (Jan 2018 – Apr 2026)', fontsize=11, fontweight='bold')
+plot_raw(ax_rel, releases, 'Releases / month', 'Total releases per month')
+fig_rel.tight_layout()
+fig_rel.savefig('pypi_growth_releases.png', dpi=150, bbox_inches='tight')
+plt.close(fig_rel)
+print("Saved: pypi_growth_releases.png")
 
 # ── Month-over-month growth, last 12 months ───────────────────────────────────
 

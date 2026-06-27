@@ -1,4 +1,4 @@
-# Did Generative AI Accelerate PyPI Growth?
+# Does Agentic Coding Accelerate PyPI Growth?
 
 **TL;DR** — The agentic coding explosion is clearly visible in PyPI data. Starting October 2025, both the number of new packages and the release frequency break from their long-term trend in a statistically significant way (p < 10⁻¹⁵).
 
@@ -9,7 +9,7 @@ Both metrics show a statistically significant break (p < 10⁻¹⁵). The monthl
 ```bibtex
 @misc{monperrus2026pypi,
   author = {Monperrus, Martin},
-  title  = {Did Generative AI Accelerate PyPI Growth?},
+  title  = {Does Agentic Coding Accelerate PyPI Growth?},
   year   = {2026},
   url    = {https://github.com/monperrus/experiment-pypi-growth}
 }
