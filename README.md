@@ -8,3 +8,9 @@ Experimental data around the post-2025 growth of codingand software.
 - `claude-code/`: Claude Code-attributed GitHub commit counting scripts and CSV outputs.
 
 Large raw dumps are intentionally not committed.
+
+## Figures
+
+![PyPI package growth](pypi/pypi_growth_packages.png)
+
+![crates.io crate growth](rust/cargo_growth_crates.png)
